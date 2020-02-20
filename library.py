@@ -7,3 +7,6 @@ class Library:
 
     def add_book(self, index, score):
         self.books[index] = score
+
+    def sort_by_score(self):
+        self.books = {k: v for k, v in sorted(self.books.items(), key=lambda item: item[1])}
